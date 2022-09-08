@@ -1,0 +1,16 @@
+
+======= API HTTP REQUESTS - VIA AXIOS =======
+
+axios.get("...")
+- returns a promise (like fetch)
+
+res
+- data is fully filled in!
+- it already parsed the json and filled in the data field
+- where fetch did not
+
+Benefit of Axios:
+- one less step than fetch
+
+.catch()
+- catch the errors
