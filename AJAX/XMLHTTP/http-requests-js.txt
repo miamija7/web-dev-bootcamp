@@ -1,0 +1,7 @@
+
+======= API HTTP REQUESTS - VIA JS =======
+
+XMLHttpRequest:
+- the "original" way to send requests via JS
+- no promises, all callbacks
+
