@@ -1,0 +1,33 @@
+
+======= API HTTP REQUESTS - VIA FETCH =======
+
+fetch
+- newer http request method in js
+- GET by default
+- returns a promise
+
+.then()
+- .then() a
+- actions after fulfilled fetch promise
+
+.catch()
+- actions after rejected fetch promise
+
+res
+- variable name for a response
+- resolves as soon as it can... "premature"
+- .then(res => {...})
+- here res has an incomplete body... the body is a readable stream
+- so we need to res.json()
+
+res.json().then(data => {...})
+- res.json() returns a promise
+- if promise fulfilled, data holds json
+
+
+
+e
+- variable name for error
+- .catch(e => {...})
+
+
