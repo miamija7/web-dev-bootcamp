@@ -11,6 +11,7 @@
 //         console.log("ERROR:", e);
 //     })
 
+
 // fetch("https://swapi.dev/api/people/1")
 //     .then(res => {
 //         console.log("1ST RESOLVED:", res);
@@ -32,17 +33,35 @@
 //         console.log("ERROR:", e);
 //     })
 
-const loadStarWarsPeople = async () => {
+
+// // REFACTOR TO ASYNC FUNCTION
+// const loadStarWarsPeople = async () => {
+//     try {
+//         const res = await fetch("https://swapi.dev/api/people/1");
+//         const data = await res.json();
+//         console.log(data);
+//         const res2 = await fetch("https://swapi.dev/api/people/2");
+//         const data2 = await res2.json();
+//         console.log(data2);
+//     } catch (e) {
+//         console.log("ERROR:", e);
+//     }
+// }
+// loadStarWarsPeople();
+
+
+// REFACTOR TO ACCEPT AN :ID
+const loadStarWarsPeople = async (id) => {
     try {
-        const res = await fetch("https://swapi.dev/api/people/1");
+        const res = await fetch(`https://swapi.dev/api/people/${id}`);
         const data = await res.json();
         console.log(data);
-        const res2 = await fetch("https://swapi.dev/api/people/2");
-        const data2 = await res2.json();
-        console.log(data2);
+
     } catch (e) {
         console.log("ERROR:", e);
     }
 }
-loadStarWarsPeople();
+
+loadStarWarsPeople(11);
+loadStarWarsPeople(21);
 
