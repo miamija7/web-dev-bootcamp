@@ -1,0 +1,17 @@
+======= API REQUESTS =======
+
+Variables in API Requests:
+    https://swapi.dev/api/people/:id
+    https://swapi.dev/api/people/{{id}}
+    https://swapi.dev/api/people/<id>
+
+Query Strings:
+- query strings can be completely ignored
+    https://swapi.dev/api/people/5?query=string&keay=value
+- some apis search with query strings
+    https://api.tvmaze.com/schedule?country=US&date=2022-12-01
+    https://api.tvmaze.com/schedule
+        parameters
+        -> country      US
+        -> date         2022-12-01
+
