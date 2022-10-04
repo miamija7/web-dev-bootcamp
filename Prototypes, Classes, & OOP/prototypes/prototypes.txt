@@ -20,6 +20,10 @@ What are Prototypes?
     NOTE: Proto can also be called "dunder" (double under)
 
 
+Prototype vs __proto__:
+- __proto__ is a reference to the object prototype
+- .prototype is the actual prototype object we can add on to
+
 
 
 
