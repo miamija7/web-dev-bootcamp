@@ -1,0 +1,26 @@
+
+======= JAVASCRIPT - PROTOTYPES =======
+
+
+What are Prototypes?
+- the mechanism by which JavaScript objects inherit features from one another
+- push() is NOT a method, but a prototype
+- property that references the array prototype
+- prototype is the template object for a data type
+- provides methods for all of that datatype
+- not defined on every array that we make, it is defined on the prototype object
+- PROTOTYPES ARE A TEMPLATE OBJECT
+
+    [1,2,3].push(4);
+
+    (3) [1, 2, 3, sing: f]
+        > sing: f ()
+        > __proto__: Array (0)
+
+    NOTE: Proto can also be called "dunder" (double under)
+
+
+
+
+
+
