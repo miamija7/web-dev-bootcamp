@@ -1,4 +1,4 @@
-// Make color conversion functions
+// Todo: Make color conversion functions
 function hex(r, g, b) {
     return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
 }
@@ -12,7 +12,7 @@ hex(255, 100, 25);
 // "rgb(255,100,25)"
 
 
-// Make a Factory Function
+// Todo: Make a Factory Function
 function makeColor(r, g, b) {
     const color = {};
     color.r = r;
@@ -41,7 +41,38 @@ console.log(black.hex === firstColor.hex)    // false
 console.log("hi".slice === "bye".slice)     // true
 
 
-// Make a Constructor Function
+// Todo: Make a Constructor Function w/ prototypes
+function Color(r,g,b) {
+    this.r = r;
+    this.g = g;
+    this.b = b;
+}
+// RETURNS UNDEFINED: Color(255,0,0);
+// RETURNS NEW OBJECT: new Color(255,0,0)
+
+Color.prototype.rgb = function () {
+    const { r, g, b } = this;
+    return `rgb(${r}, ${g}, ${b})`
+}
+
+Color.prototype.hex = function () {
+    const { r, g, b } = this;
+    return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+}
+
+Color.prototype.rgba = function (a = 1.0){
+    const { r, g, b } = this;
+    return `rgb(${r}, ${g}, ${b}, ${a})`;
+}
+
+const color1 = new Color(40,255,40);
+const color2 = new Color(0,0,0);
+// document.body.style.backgroundColor = color1.rgba(0.5)
+
+
+
+
+
 
 
 
