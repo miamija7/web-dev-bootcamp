@@ -1,3 +1,4 @@
+// Make color conversion functions
 function hex(r, g, b) {
     return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
 }
@@ -32,5 +33,15 @@ const firstColor = makeColor(35, 255, 150);
 firstColor.rgb();
 firstColor.hex();
 
+const black = makeColor(0, 0, 0);
+firstColor.rgb();
+firstColor.hex();
+
+console.log(black.hex === firstColor.hex)    // false
+console.log("hi".slice === "bye".slice)     // true
+
 
 // Make a Constructor Function
+
+
+
