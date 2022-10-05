@@ -20,3 +20,10 @@ Creating an object with a user-defined constructor function requires two steps:
     1. Define the object type by writing a function that specifies its name and properties.
     2. Create an instance of the object with new.
 
+
+
+==> JAVASCRIPT CLASSES <==
+- Capitalize the class name
+- Needs a Constructor, this will automatically be called whenever we instantiate a new instance of that class
+- this refers to the current instance of that object
+- everything lives in the prototype!
