@@ -1,0 +1,7 @@
+
+============= NODE JS =============
+
+==> INSTALLATION <==
+1. https://nodejs.org/en/
+2. LTS
+3. Open -> continue -> continue -> Agree -> Continue -> Install
