@@ -1,7 +1,74 @@
 
 ============= NODE JS =============
 
+
 ==> INSTALLATION <==
+
 1. https://nodejs.org/en/
 2. LTS
 3. Open -> continue -> continue -> Agree -> Continue -> Install
+
+Terminal:
+> node                  open node in terminal
+> ^C (x2) or .exit      exit
+> node -v               get version
+
+
+
+==> NODE REPL <==
+- Read, Evaluate, Print, Loop
+- REPL in Node is equivalent to the JavaScript console
+- Not the way we will be writing & executing code...
+
+Terminal (Node):
+> .help
+> global
+> console.log()
+> setTimeout(()=>{console.log("HELLO!!!")}, 3000)
+
+
+
+==> WRITING JS <==
+Terminal (Node):
+> .exit
+
+Terminal:
+> touch firstScript.js
+
+VSCode:
+Edit file in vscode! Add some code...
+
+Terminal:
+> node firstScript.js
+
+
+
+==> MANAGING VERSIONS <==
+- NVM: node version manager
+
+
+
+
+==> Process <==
+- Object in the global scope
+- Provides information about, and control over, the current Node.js process
+
+Terminal (Node):
+> process
+> process.version
+> process.release
+> process.cwd()            current working directory
+> process.argv             arguments in process.args
+> node file.js arg1 arg2    running a script with args
+
+
+
+
+==> File System <==
+https://nodejs.org/docs/latest-v16.x/api/fs.html#file-system
+
+
+
+
+==> Modules & NPM <==
+- NPM: Node Package Manager
