@@ -1,0 +1,7 @@
+
+============= NODE JS - NPM =============
+
+
+==> Modules & NPM <==
+- NPM: Node Package Manager
+- Express: A Node Package installed using npm

@@ -66,9 +66,3 @@ Terminal (Node):
 
 ==> File System <==
 https://nodejs.org/docs/latest-v16.x/api/fs.html#file-system
-
-
-
-
-==> Modules & NPM <==
-- NPM: Node Package Manager
