@@ -1,7 +1,22 @@
 
 ============= NODE JS - NPM =============
 
+NPM - Node Package Manager
+    NPM is really two things:
+    1. A library with thousands of packages published by other developers that we can use for free!
+    2. A command line tool to easily install and manage those packages in out Node projects.
+
+
+Familiar Packages:
+- react
+- express
+
 
 ==> Modules & NPM <==
 - NPM: Node Package Manager
 - Express: A Node Package installed using npm
+
+==> Install <==
+> cd /Users/miaevans/IdeaProjects/web-dev-bootcamp
+> npm install
+
