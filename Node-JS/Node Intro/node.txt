@@ -48,7 +48,6 @@ Terminal:
 
 
 
-
 ==> Process <==
 - Object in the global scope
 - Provides information about, and control over, the current Node.js process

@@ -16,7 +16,21 @@ Familiar Packages:
 - NPM: Node Package Manager
 - Express: A Node Package installed using npm
 
-==> Install <==
-> cd /Users/miaevans/IdeaProjects/web-dev-bootcamp
-> npm install
+
+==> Install Example <==
+> cd /Users/miaevans/IdeaProjects/web-dev-bootcamp/Node-JS/NPM/
+> mkdir Jokster
+> cd Jokester
+> npm install give-me-a-joke
+    + node_modules              dependencies
+    + package.json              (error: no package.json)
+    + package-lock.json         a record of the contents of that node_modules directory
+> touch index.js
+    + require package
+      const jokes = require("give-me-a-joke");
+    + verify
+      condole.dir(jokes);
+> node index.js
+> npm i colors
+> ls node_modules (now you can see a colors package)
 
