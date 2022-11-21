@@ -1,0 +1,69 @@
+
+======= MONGOOSE =======
+
+ -----------------                        -----------------
+|     Node.js     |<----> Mongoose <---->|     MongoDB     |
+ -----------------                        -----------------
+
+Mongoose:
+- ODM
+- Connects Node/JS to Mongo
+- Connecting to mongodb from a node app!
+
+Topics:
+Schema Constraints
+Model Instance & Static Methods
+Mongoose Middleware
+Mongoose Virtuals
+
+The Role of ORM/ODMs:
+- Object Data/Document Mapper [No-SQL]
+- Object Relation Mapper [SQL]
+- more than a driver
+- ODMs map documents coming in from a database into usable JavaScript objects
+- models out our app data and defines a schema
+- validate data
+- build complex queries
+- all from JS
+
+
+Connecting Mongoose to Mongo:
+% cd /Users/miaevans/IdeaProjects/web-dev-bootcamp/Mongoose/MongooseBasics
+% npm init -y
+% npm i mongoose
+% touch index.js
+% ls
+  index.js		node_modules		package-lock.json	package.json
+// work in index.js file
+
+
+Defining a Model:
+- JavaScript classes that represent data in a db
+- models information coming back from our mongodb
+- Defining a Model:
+    1. Define a schema (name: singularSchema)
+    2. Make a model with the schema (name: Singular)
+    3. Collection is auto created (name: plural)
+% node                                  % mongosh
+> .load index.js                        > use movieApp
+> nemo                                  > db.movies.find()
+> nemo.save()                           > db.movies.find()
+> nemo.score = 9.5                      >
+> nemo.save()                           > db.movies.find()
+
+
+
+Mongoose CRUD:
+- Create [insert]:
+    Movie.insertMany([
+        { title: 'Amelie', year: 2001, score: 8.3, rating: 'R' },
+        { title: 'Alien', year: 1979, score: 8.1, rating: 'R' },
+        { title: 'The Iron Giant', year: 1999, score: 7.5, rating: 'PG' },
+        { title: 'Stand By Me', year: 1986, score: 8.6, rating: 'R' },
+        { title: 'Moonrise Kingdom', year: 2012, score: 7.3, rating: 'PG-13' }
+    ]).then(data => {
+            console.log("IT WORKED!")
+            console.log(data);
+    })
+- Read [queries]:
+
