@@ -1,0 +1,52 @@
+
+======= MONGO DB =======
+
+BSON:
+- JSON: JavaScript Object Notation
+- BSON: Binary JSON
+
+
+MongoDB:
+- Collections are a grouping of data in a database
+- Documents are data in MongoDB
+> db.collection...
+
+
+CRUD:
+- CRUD: Create, Read, Update, Delete
+- Create [insert]
+    db.collection.insertOne()
+    db.collection.insertMany()
+    db.collection.insert()
+    db.dogs.insertOne({ name: "charlie", age: 3, breed: "corgi", catFriendly: true})
+    show collections
+    db.dogs.find()
+    db.dogs.insert([{name: "wyatt", breed: "golden", age: 14, catFriendly: false}, {name: "tonya", breed: "chihuahua", age: 17, catFriendly: true}])
+- Read [find]
+    db.collection.find()                    // returns a cursor to selected documents'
+    db.collection.findOne()                 // returns a document
+    db.dogs.find({breed: "corgi"})
+    db.dogs.findOne({catFriendly: true})
+- Update [update/replace]
+    db.collection.updateOne()
+    db.collection.updateMany()
+    db.collection.replaceOne()
+    db.dogs.updateOne({name: "charlie"}, {$set: {age: 4}})
+    db.dogs.updateOne({name: "charlie"}, {$set: {color: "chocolate"}})
+    db.dogs.updateMany({catFriendly: true}, {$set:{ isAvailable: false}})
+    db.dogs.updateMany({name: "wyatt"}, {$set: {age: 2}, $currentDate: {lastChanged: true}})
+    db.dogs.replaceOne(...change everything but id...)
+- Destroy [delete]
+    db.collection.deleteOne()
+    db.collection.deleteMany()
+    db.dogs.deleteMany({isAvailable: false})
+    db.dogs.deleteMany({})                  // deletes all docs in collection
+
+
+ADDITIONAL OPERATORS:
+Nested Search       db.collection.find({'personality.childFriendly':true, age: 10})
+Logical Operators   $eq, $gt, $gte, $lt, $lte, $in, $ne, $nin | $and, $not, $nor, $or
+                    db.dogs.find({ age: { $gte: 8 }})
+                    db.dogs.find({ breed: { $in: ['golden', 'chihuahua']}, age: { $lt: 10 }})
+                    db.dogs.find({ age: { $gt: 5 }, isAvailable: true })
+                    db.dogs.find( $or: [{'personality.catFriendly':true}, {age: {$lte:2}}])

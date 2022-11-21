@@ -1,0 +1,47 @@
+
+======= MONGO DB - INTRO/INSTALL =======
+
+Why MongoDB?
+- Mongo pairs well with Node and Express
+- MERN & MEAN stack (Mongo, Express, Node)
+- Plays well with JavaScript
+- No-SQL / Document-Database
+
+Install:
+https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/
+1.  install x-code                                  % xcode-select --install
+2.  install brew                                    % /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+3.  Tap the MongoDB Homebrew Tap                    % brew tap mongodb/brew
+4.  Upgrade Brew                                    % brew upgrade
+5.  Update Homebrew and all existing formulae       % brew install mongodb-community@6.0
+6.  Check where brew installed                      % brew --prefix
+
+Run MongoDB:
+- as a macOS service (recommended)
+    Start           % brew services start mongodb-community@6.0
+    Stop            % brew services stop mongodb-community@6.0
+- manually as a background process
+    (Intel) Start       % mongod --config /usr/local/etc/mongod.conf --fork
+    (M1)    Start       % mongod --config /opt/homebrew/etc/mongod.conf --fork
+    To stop a mongod running as a background process, connect to the mongod using mongosh, and issue the shutdown command as needed.
+
+
+Verify MongoDB is running:
+Service     % brew services list
+Process     % ps aux | grep -v grep | grep mongod
+Status      % cat /usr/local/var/log/mongodb/mongo.log
+
+
+Connect and Use MongoDB:
+Connect     % mongosh
+DB Tools    % mongotop
+
+
+MongoDB Intro
+% mongosh
+> db
+> show dbs
+> use animalShelter
+> show dbs
+> db
+> control + c
