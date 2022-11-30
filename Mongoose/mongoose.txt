@@ -11,9 +11,7 @@ Mongoose:
 - Connecting to mongodb from a node app!
 
 Topics:
-Model Instance & Static Methods
 Mongoose Middleware
-Mongoose Virtuals
 
 The Role of ORM/ODMs:
 - Object Data/Document Mapper [No-SQL]
@@ -94,5 +92,45 @@ Schema Constraints:
     Product.findOneAndUpdate({name: 'Bike Helmet'}, {price: -10.99}, {new: true, runValidators: true})
         .then(data => console.log(data))
         .catch(e => console.log(e))
+- input validation can have error messages
+    price: {
+        type: Number,
+        required: true,
+        min: [0, 'Price must be positive ya dodo!']
+    }
+- input validation can be a fixed value using enum for set fixed valid data
+    size: {
+        type: String,
+        enum: ['S','M','L']
+    }
 
 
+Model Instance & Static Methods:
+Instance Methods:
+- instances of a model / this = individual product
+- instance methods are available on every single instance
+- class methods are only available on classes, like Product, or Movie
+- adding functions to instance:
+    schemaName.methods.function = function () { ... }
+Static Methods:
+- static method on a model / this = entire Model
+- method on Model Class, not instances
+- used for creating fancy find/update/removal methods
+- adding functions to Model Classes:
+    schemaName.statics.function () { ... }
+
+
+
+Mongoose Virtuals:
+- different from adding instance methods, it adds a property
+- a property that does not exist in the database, but strictly in mongoose side in JS
+- uses .get()
+- you can define a set function in a virtual! using .set()
+    personSchema.virtual('fullName').get(function () {
+        return `${this.first} ${this.last}`;
+    }).set(function (v) {
+        this.first = v.substr(0, v.indexOf(' '));
+        this.last = v.substr(v.indexOf(' ') + 1 );
+    })
+
+    mia.
